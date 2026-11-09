@@ -32,7 +32,7 @@ function Contact() {
 
           <a
             className="button button-secondary"
-            href="https://www.linkedin.com/"
+            href="https://www.linkedin.com/in/narendra-puchala"
             target="_blank"
             rel="noreferrer"
           >

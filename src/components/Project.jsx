@@ -1,81 +1,54 @@
 
 const projects = [
   {
-    title: "Smart IT Service Desk",
+    title: "VoiceGenie",
+    description:
+      "A voice-based AI assistant designed to accept voice input and help users interact through conversational features.",
+    technologies: ["React", "JavaScript", "AI", "Speech Recognition"],
+    github: "https://github.com/pnarendra19/Voice-Genie",
     status: "In Progress",
-    description:
-      "A planned full-stack application for managing IT support requests, tracking ticket status, and organizing service desk workflows.",
-    technologies: ["React", "Node.js", "Express", "MongoDB"],
-    github: "",
-    demo: "",
   },
-  {
-    title: "Scholarship Project",
-    status: "Repository Available",
-    description:
-      "An existing project repository. Add a description of the actual features, your contribution, and the technologies used.",
-    technologies: ["Technologies to be confirmed"],
-    github: "https://github.com/pnarendra19/Scholorship.git",
-    demo: "",
-  }
+
+  
+{
+  title: "Scholarship Project",
+  description:
+    "A web-based scholarship project developed to help users explore and access scholarship-related information.",
+  technologies: ["React", "Node.js", "Express", "MongoDB"],
+  github: "https://github.com/pnarendra19/Scholorship",
+  status: "Completed",
+},
+
 ];
 
 function Project() {
   return (
-    <section className="page-container page-section">
-      <div className="section-heading">
-        <p className="eyebrow">WHAT I'M BUILDING</p>
-        <h1>My Projects</h1>
-        <p className="section-description">
-          Academic and personal projects that demonstrate my learning.
-        </p>
-      </div>
+    <section className="projects section">
+      <h1>My Projects</h1>
+      <p>Some projects I have built and am currently developing.</p>
 
-      <div className="projects-grid">
+      <div className="project-grid">
         {projects.map((project) => (
           <article className="project-card" key={project.title}>
-            <div className="project-top">
-              <div className="project-icon">{"< />"}</div>
-              <span className="project-status">
-                <span className="status-dot"></span>
-                {project.status}
-              </span>
-            </div>
-
             <h2>{project.title}</h2>
-            <p className="project-description">{project.description}</p>
+            <p>{project.description}</p>
 
-            <div className="project-tech">
-              {project.technologies.map((technology) => (
-                <span key={technology}>{technology}</span>
-              ))}
-            </div>
+            <p>
+              <strong>Technologies:</strong>{" "}
+              {project.technologies.join(" • ")}
+            </p>
 
-            <div className="project-links">
-              {project.github ? (
-                <a
-                  href={project.github}
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  View GitHub ↗
-                </a>
-              ) : (
-                <span className="link-placeholder">
-                  Source link to be added
-                </span>
-              )}
+            <p>
+              <strong>Status:</strong> {project.status}
+            </p>
 
-              {project.demo && (
-                <a
-                  href={project.demo}
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  Live Demo ↗
-                </a>
-              )}
-            </div>
+            <a
+              href={project.github}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              View Source Code →
+            </a>
           </article>
         ))}
       </div>

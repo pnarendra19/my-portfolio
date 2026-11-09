@@ -14,7 +14,7 @@ const skillGroups = [
   },
   {
     title: "Tools & Technologies",
-    skills: ["Git", "GitHub", "VS Code", "Power BI", "N8N", "Generative AI"],
+    skills: ["Git", "GitHub", "VS Code", "Generative AI"],
   },
 ];
 
