@@ -38,9 +38,9 @@ function Home() {
 
 
 <a
-  href="/Narendra_Resume_FINALONE.pdf"
+  href="/Narendra.pdf"
   className="button button-secondary"
-  download="Narendra-Resume.pdf"
+  download="Narendra.pdf"
 >
   Download Resume ↓
 </a>
